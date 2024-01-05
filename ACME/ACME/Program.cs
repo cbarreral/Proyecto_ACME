@@ -21,6 +21,9 @@ namespace ACME
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    //Modificamos el puerto para evitar errores futuros 
+                    
+                    webBuilder.UseUrls("http://*:5024");
                 });
     }
 }

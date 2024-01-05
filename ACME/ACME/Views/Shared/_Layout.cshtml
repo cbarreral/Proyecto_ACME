@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,10 +19,13 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" href="@Url.Action("ObtenerInventarioPorSucursal", "Inventario_Controller", new { sucursalId = 1 })" target="_blank" rel="noopener noreferrer">Sucursal A</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" href="@Url.Action("ObtenerInventarioPorSucursal", "Inventario_Controller", new { sucursalId = 2 })" target="_blank" rel="noopener noreferrer">Sucursal B</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="@Url.Action("ObtenerInventarioPorSucursal", "Inventario_Controller", new { sucursalId = 3 })" target="_blank" rel="noopener noreferrer">Sucursal C</a>
                         </li>
                     </ul>
                 </div>
@@ -32,6 +35,8 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+
+           
         </main>
     </div>
 
