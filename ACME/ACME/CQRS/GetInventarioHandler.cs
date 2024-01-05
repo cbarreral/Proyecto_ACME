@@ -11,8 +11,7 @@ namespace ACME.CQRS
     {
         public int SucursalId { get; set; }
     }
-
-    // GetInventarioHandler.cs
+     
     public class GetInventarioHandler
     {
         private readonly IInventarioRepository _inventarioRepository;
@@ -22,7 +21,7 @@ namespace ACME.CQRS
             _inventarioRepository = inventarioRepository;
         }
 
-        public async Task<IEnumerable<Inventario_Model>> Handle(GetInventarioQuery query)
+        public async Task<IEnumerable<InventarioModel>> Handle(GetInventarioQuery query)
         {
             return await _inventarioRepository.GetInventarioPorSucursalAsync(query.SucursalId);
         }

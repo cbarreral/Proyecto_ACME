@@ -1,0 +1,30 @@
+﻿@model List<InventarioModel>
+
+<h2>Inventario de la Sucursal</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Código de barras</th>
+            <th>Disponibles</th>
+            <th>Precio Unitario</th>
+            <th>Fecha de Actualización</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in @Model)
+        {
+        <tr>
+            <td>@item.Producto.Nombre</td>
+            <td>@item.Producto.CodigoBarras</td>
+            <td>@item.CantidadTotalDeProductosDisponibles</td>
+            <td>@item.FechaActualizacion.ToString("dd/MM/yyyy HH:mm")</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a href="/Inventario_Controller/Crear">Añadir nuevo producto</a>
+</p>

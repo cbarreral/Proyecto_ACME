@@ -1,0 +1,12 @@
+﻿@model InventarioModel
+
+<form asp-action="Editar" method="post">
+    <input type="hidden" asp-for="Id" />
+    
+    <div class="form-group">
+        <label asp-for="CantidadTotalDeProductosDisponibles">Cantidad</label>
+        <input asp-for="CantidadTotalDeProductosDisponibles" class="form-control" />
+
+    </div>
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>

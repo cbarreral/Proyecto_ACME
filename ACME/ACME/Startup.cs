@@ -1,4 +1,5 @@
 using ACME.Data;
+using ACME.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,8 @@ namespace ACME
         { 
             services.AddDbContext<AcmeContext>(options =>
              options.UseSqlServer(Configuration.GetConnectionString("AcmeDatabase")));
+            services.AddScoped<IInventarioRepository, InventarioRepository>();
+
 
             services.AddControllersWithViews();
         }

@@ -15,9 +15,9 @@ namespace ACME.Data
         {
         }
 
-        public DbSet<Sucursal_Model> Sucursales { get; set; }
-        public DbSet<Producto_Model> Productos { get; set; }
-        public DbSet<Inventario_Model> Inventarios { get; set; }
+        public DbSet<SucursalModel> Sucursales { get; set; }
+        public DbSet<ProductoModel> Productos { get; set; }
+        public DbSet<InventarioModel> Inventarios { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
